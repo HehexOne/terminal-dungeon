@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/terminal_game.dir/main.cpp.o  -o terminal_game 
