@@ -141,7 +141,6 @@ public:
             } else if (pos.y < 0) {
                 zone.y -= 1;
                 pos.y = nY - zone.y * screenSize[1];
-                cout << "HERE" << ' ' << pos.y << ' ' << zone.y << ' ' << nY << endl;
             }
         }
     }
