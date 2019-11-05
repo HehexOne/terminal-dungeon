@@ -156,7 +156,7 @@ public:
     Renderer() {
         // Empty screen generation
         vi tmp(screenSize[0], blank); // Variable for temp X row
-        for (int i; i < screenSize[1]; i++) screen.push_back(tmp); // Create Y row with X rows
+        for (int i = 0; i < screenSize[1]; i++) screen.push_back(tmp); // Create Y row with X rows
     }
 
     void draw(vvi const &object, Position pos) {
