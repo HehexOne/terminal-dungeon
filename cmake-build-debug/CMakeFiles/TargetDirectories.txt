@@ -1,3 +1,0 @@
-/run/media/hehexone/HehexDrive/Projects/terminal-game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/run/media/hehexone/HehexDrive/Projects/terminal-game/cmake-build-debug/CMakeFiles/terminal_game.dir
-/run/media/hehexone/HehexDrive/Projects/terminal-game/cmake-build-debug/CMakeFiles/edit_cache.dir
