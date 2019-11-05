@@ -178,27 +178,31 @@ public:
 
 };
 
-int main() {
-    Map map("/run/media/hehexone/HehexDrive/Projects/terminal-game/map_test");
-    Renderer renderer;
-    Hero hero("custom_name");
-    Position pos{0, 0};
-    while (true) {
-        renderer.draw(map.getZone(hero.getZone().x, hero.getZone().y), {0, 0});
-        renderer.draw(hero.getSprite(), hero.getPosition());
-        renderer.update();
-        char c = (char) getch();
-        if (c == 'w') {
-            hero.updatePosition({0, -1}, map);
-        } else if (c == 's') {
-            hero.updatePosition({0, 1}, map);
-        } else if (c == 'a') {
-            hero.updatePosition({-1, 0}, map);
-        } else if (c == 'd') {
-            hero.updatePosition({1, 0}, map);
-        } else if (c == 'x') {
-            break;
+int main(int argc, char* argv[]) {
+    if (argc > 1) {
+        Map map(argv[1]);
+        Renderer renderer;
+        Hero hero("custom_name");
+        Position pos{0, 0};
+        while (true) {
+            renderer.draw(map.getZone(hero.getZone().x, hero.getZone().y), {0, 0});
+            renderer.draw(hero.getSprite(), hero.getPosition());
+            renderer.update();
+            char c = (char) getch();
+            if (c == 'w') {
+                hero.updatePosition({0, -1}, map);
+            } else if (c == 's') {
+                hero.updatePosition({0, 1}, map);
+            } else if (c == 'a') {
+                hero.updatePosition({-1, 0}, map);
+            } else if (c == 'd') {
+                hero.updatePosition({1, 0}, map);
+            } else if (c == 'x') {
+                return 0;
+            }
         }
+    } else {
+        cout << "No map provided. Example use: terminal_game map_file.txt" << endl;
+        return 45;
     }
-    return 0;
 }
